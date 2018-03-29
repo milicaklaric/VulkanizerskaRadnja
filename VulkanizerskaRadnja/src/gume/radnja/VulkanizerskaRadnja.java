@@ -18,7 +18,7 @@ public class VulkanizerskaRadnja {
 	private LinkedList<AutoGuma> gume = new LinkedList<AutoGuma>();
 
 	/**
-	 * Dodavanje nove gume u radnju
+	 * Dodavanje nove gume u radnju i to na pocetak liste
 	 * 
 	 * @param a nova guma koja se dodaje
 	 * 
@@ -29,9 +29,11 @@ public class VulkanizerskaRadnja {
 	public void dodajGumu(AutoGuma a) {
 		if (a == null)
 			throw new NullPointerException("Guma ne sme biti null");
-		if (gume.contains(a))
+		
+		if (getGume().contains(a))
 			throw new RuntimeException("Guma vec postoji");
-		gume.addFirst(a);
+		
+		getGume().addFirst(a);
 	}
 
 	/**
@@ -47,10 +49,14 @@ public class VulkanizerskaRadnja {
 		
 		LinkedList<AutoGuma> novaLista = new LinkedList<AutoGuma>();
 		
-		for (int i = 0; i < gume.size(); i++)
-			if (gume.get(i).equals(markaModel))
-				novaLista.add(gume.get(i));
+		for (int i = 0; i < getGume().size(); i++)
+			if (getGume().get(i).getMarkaModel().equals(markaModel))
+				novaLista.add(getGume().get(i));
 		
 		return novaLista;
+	}
+
+	public LinkedList<AutoGuma> getGume() {
+		return gume;
 	}
 }
