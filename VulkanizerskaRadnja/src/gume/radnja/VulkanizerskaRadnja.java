@@ -22,9 +22,9 @@ public class VulkanizerskaRadnja {
 	 * 
 	 * @param a nova guma koja se dodaje
 	 * 
-	 * @throws NullPointerException ukoliko je parametar null
+	 * @throws NullPointerException ukoliko je parametar a null
 	 * 
-	 * @throws RuntimeException ukoliko guma vec postoji u radnji
+	 * @throws RuntimeException ukoliko guma a vec postoji u radnji
 	 */
 	public void dodajGumu(AutoGuma a) {
 		if (a == null)
@@ -56,6 +56,7 @@ public class VulkanizerskaRadnja {
 		return novaLista;
 	}
 
+	//Naknadno dodato zbog Test klase
 	public LinkedList<AutoGuma> getGume() {
 		return gume;
 	}

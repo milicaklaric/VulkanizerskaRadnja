@@ -31,7 +31,7 @@ public class AutoGuma {
 
 	
 	/**
-	 * Vraca marku i modde gume
+	 * Vraca vrednost atributa markaModel gume
 	 * @return marka i model gume
 	 */
 	public String getMarkaModel() {
@@ -50,12 +50,13 @@ public class AutoGuma {
 	public void setMarkaModel(String markaModel) {
 		if (markaModel == null || markaModel.length() < 3)
 			throw new RuntimeException("Morate uneti marku i model");
+		
 		this.markaModel = markaModel;
 	}
 
 	
 	/**
-	 * Vraca precnik gume
+	 * Vraca vrednost atributa precnik gume
 	 * @return precnik gume
 	 */
 	public int getPrecnik() {
@@ -77,7 +78,7 @@ public class AutoGuma {
 
 	
 	/**
-	 * Vraca sirinu gume
+	 * Vraca vrednost atributa sirina gume
 	 * @return sirina gume
 	 */
 	public int getSirina() {
@@ -98,7 +99,7 @@ public class AutoGuma {
 	}
 
 	/**
-	 * Vraca visinu gume
+	 * Vraca vrednost atributa visina gume
 	 * @return visina gume
 	 */
 	public int getVisina() {
@@ -131,7 +132,7 @@ public class AutoGuma {
 	
 	/**
 	 * Poredi da li su dve gume  iste u odnosu na sve njihove atribute
-	 * @return true ukoliko gume imaju sve iste atribute,
+	 * @return true ukoliko dve gume imaju sve iste atribute,
 	 * false u suprotnom
 	 */
 	@Override
@@ -154,6 +155,7 @@ public class AutoGuma {
 			return false;
 		if (visina != other.visina)
 			return false;
+		
 		return true;
 	}
 }

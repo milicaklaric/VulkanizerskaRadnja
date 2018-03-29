@@ -123,8 +123,8 @@ public class AutoGumaTest {
 		
 		AutoGuma a2 = new AutoGuma();
 		a2.setMarkaModel("efgh");
-		a2.setPrecnik(18);
-		a2.setSirina(150);
+		a2.setPrecnik(19);
+		a2.setSirina(160);
 		a2.setVisina(50);
 		
 		assertFalse(a.equals(a2));
