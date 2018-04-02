@@ -131,6 +131,15 @@ public class VulkanizerskaRadnjaTest {
 		
 		assertEquals(2, nova.size());
 		
+		//U listi nova nalaze se gume a i a3, guma a2 se ne nalazi u listi
+		assertTrue(nova.contains(a));
+		assertTrue(nova.contains(a3));
+		assertFalse(nova.contains(a2));
+		
+		/* drugi nacin
+		assertEquals(a, nova.get(1));
+		assertEquals(a3, nova.get(0));
+		*/
 	}
 
 }
